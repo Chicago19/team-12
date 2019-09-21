@@ -13,11 +13,12 @@
         <activity android:name=".LearnMore1Activity"></activity>
         <activity android:name=".HomePage">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />  
+              </intent-filter>
         </activity>
         <activity android:name=".ui.login.DboardActivity"></activity>
+        <activity android:name=".ui.login.DashboardActivity" />
         <activity android:name=".PlacementExam" />
         <activity android:name=".ui.login.InterestedInWorkActivity"></activity>
         <activity
