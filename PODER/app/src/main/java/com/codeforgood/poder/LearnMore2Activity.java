@@ -19,16 +19,17 @@ public class LearnMore2Activity extends AppCompatActivity {
         getSupportActionBar().hide();
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        setContentView(R.layout.activity_learn_more1);
+        setContentView(R.layout.activity_learn_more2);
 
-        Button next = (Button) findViewById(R.id.next);
-        next.setVisibility(View.VISIBLE);
-        next.setBackgroundColor(Color.TRANSPARENT);
+        Button b2 = (Button) findViewById(R.id.b2);
+        b2.setVisibility(View.VISIBLE);
+        b2.setBackgroundColor(Color.TRANSPARENT);
 
-        next.setOnClickListener(new View.OnClickListener() {
+        b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LearnMore2Activity.this, LearnMore3Activity.class);
+                System.out.println("======got here ======="+intent.toString());
                 startActivity(intent);
             }
         });

@@ -20,12 +20,12 @@ public class LearnMore1Activity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_learn_more1);
-        Button next = (Button) findViewById(R.id.next);
+        Button b1 = (Button) findViewById(R.id.b1);
 
-        next.setVisibility(View.VISIBLE);
-        next.setBackgroundColor(Color.TRANSPARENT);
+        b1.setVisibility(View.VISIBLE);
+        b1.setBackgroundColor(Color.TRANSPARENT);
 
-        next.setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LearnMore1Activity.this, LearnMore2Activity.class);
