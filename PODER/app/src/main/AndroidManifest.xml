@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".RegistrationActivity"></activity>
+        <activity android:name=".OrientationActivity"></activity>
+        <activity android:name=".RegistrationActivity" />
         <activity android:name=".ContactUsActivity" />
         <activity android:name=".AppointmentActivity" />
         <activity android:name=".AccountActivity" />
