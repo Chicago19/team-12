@@ -1,4 +1,4 @@
-package com.codeforgood.poder.data;
+package com.codeforgood.poder;
 
 public class User {
     private String email;
