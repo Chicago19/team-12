@@ -1,4 +1,4 @@
-package com.codeforgood.poder.ui.login;
+package com.codeforgood.poder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,11 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import com.codeforgood.poder.AccountActivity;
-import com.codeforgood.poder.AppointmentActivity;
-import com.codeforgood.poder.HomePage;
-import com.codeforgood.poder.PlacementExam;
-import com.codeforgood.poder.R;
+import com.codeforgood.poder.ui.login.LoginActivity;
 
 public class DboardActivity extends AppCompatActivity {
 
@@ -30,6 +26,7 @@ public class DboardActivity extends AppCompatActivity {
         Button app = (Button) findViewById(R.id.AppointmentButton);
         Button demo = (Button) findViewById(R.id.DemographicsButton);
         Button exam = (Button) findViewById(R.id.ExamButton);
+        Button logout = (Button) findViewById(R.id.logout);
 
         acc.setVisibility(View.VISIBLE);
         acc.setBackgroundColor(Color.TRANSPARENT);
@@ -43,6 +40,9 @@ public class DboardActivity extends AppCompatActivity {
         exam.setVisibility(View.VISIBLE);
         exam.setBackgroundColor(Color.TRANSPARENT);
 
+        logout.setVisibility(View.VISIBLE);
+        logout.setBackgroundColor(Color.TRANSPARENT);
+
 //        acc.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -51,13 +51,13 @@ public class DboardActivity extends AppCompatActivity {
 //            }
 //        });
 
-//        demo.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(DboardActivity.this, RegistrationActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        demo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DboardActivity.this, RegistrationActivity.class);
+                startActivity(intent);
+            }
+        });
 
 //        app.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -71,6 +71,14 @@ public class DboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DboardActivity.this, PlacementExam.class);
+                startActivity(intent);
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DboardActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
