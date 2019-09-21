@@ -10,9 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import com.codeforgood.poder.ui.login.LoginActivity;
-
-public class HomePage extends AppCompatActivity {
+public class LearnMore3Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,16 +18,17 @@ public class HomePage extends AppCompatActivity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_home_page);
 
-        final Button test = (Button)findViewById(R.id.getstarted);
-        test.setVisibility(View.VISIBLE);
-        test.setBackgroundColor(Color.TRANSPARENT);
+        setContentView(R.layout.activity_learn_more3);
 
-        test.setOnClickListener(new View.OnClickListener() {
+        Button next = (Button) findViewById(R.id.next3);
+        next.setVisibility(View.VISIBLE);
+        next.setBackgroundColor(Color.TRANSPARENT);
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(HomePage.this, LoginActivity.class);
+                Intent intent = new Intent(LearnMore3Activity.this, ExtraElements.class);
                 startActivity(intent);
             }
         });
