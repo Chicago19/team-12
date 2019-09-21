@@ -28,7 +28,7 @@ public class ExamResults extends AppCompatActivity {
         nextbutton.setOnClickListener( new View.OnClickListener(){
             public void onClick (View v){
                 //go to next page
-                Intent intent = new Intent(ExamResults.this, HomePage.class);
+                Intent intent = new Intent(ExamResults.this, HomePageActivity.class);
                 startActivity(intent);
             }
         });

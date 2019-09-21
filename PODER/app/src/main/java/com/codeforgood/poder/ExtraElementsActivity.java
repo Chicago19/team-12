@@ -11,7 +11,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-public class ExtraElements extends AppCompatActivity {
+public class ExtraElementsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class ExtraElements extends AppCompatActivity {
         su.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExtraElements.this, RegistrationActivity.class);
+                Intent intent = new Intent(ExtraElementsActivity.this, RegistrationActivity.class);
                 startActivity(intent);
             }
         });
@@ -40,7 +40,7 @@ public class ExtraElements extends AppCompatActivity {
         work.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExtraElements.this, InterestedInWorkActivity.class);
+                Intent intent = new Intent(ExtraElementsActivity.this, InterestedInWorkActivity.class);
                 startActivity(intent);
             }
         });
@@ -64,7 +64,7 @@ public class ExtraElements extends AppCompatActivity {
         contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExtraElements.this, ContactUsActivity.class);
+                Intent intent = new Intent(ExtraElementsActivity.this, ContactUsActivity.class);
                 startActivity(intent);
             }
         });

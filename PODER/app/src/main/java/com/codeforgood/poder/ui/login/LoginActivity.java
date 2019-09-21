@@ -17,6 +17,7 @@ import android.widget.Button;
 import com.codeforgood.poder.DboardActivity;
 import com.codeforgood.poder.LearnMore1Activity;
 import com.codeforgood.poder.R;
+import com.codeforgood.poder.UserLoginActivity;
 
 public class LoginActivity extends AppCompatActivity {
 //i think this is like mainactivity.java
@@ -38,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         test.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                Intent intent = new Intent(LoginActivity.this, DboardActivity.class);
+                Intent intent = new Intent(LoginActivity.this, UserLoginActivity.class);
                 startActivity(intent);
             }
         });

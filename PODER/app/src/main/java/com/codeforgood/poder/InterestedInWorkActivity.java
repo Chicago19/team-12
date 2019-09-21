@@ -1,7 +1,6 @@
 package com.codeforgood.poder;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -9,8 +8,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.codeforgood.poder.R;
 
 public class InterestedInWorkActivity extends AppCompatActivity {
 
@@ -27,7 +24,7 @@ public class InterestedInWorkActivity extends AppCompatActivity {
         submitb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InterestedInWorkActivity.this, ExtraElements.class);
+                Intent intent = new Intent(InterestedInWorkActivity.this, ExtraElementsActivity.class);
                 startActivity(intent);
             }
         });

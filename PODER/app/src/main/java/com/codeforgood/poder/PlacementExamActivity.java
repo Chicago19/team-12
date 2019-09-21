@@ -20,7 +20,7 @@ import com.codeforgood.poder.ui.login.LoginActivity;
 import org.w3c.dom.Text;
 
 
-public class PlacementExam extends AppCompatActivity {
+public class PlacementExamActivity extends AppCompatActivity {
 
     private static RadioGroup rg_choices;
     private static RadioButton rb_selected;
@@ -105,7 +105,7 @@ public class PlacementExam extends AppCompatActivity {
                 public void onClick (View v){
                     PlacementTest finished_test = new PlacementTest();
                     int num_correct = finished_test.grade(student_answers);
-                    Intent intent = new Intent(PlacementExam.this, ExamResults.class);
+                    Intent intent = new Intent(PlacementExamActivity.this, ExamResults.class);
                     intent.putExtra("questions", num_correct);
                     startActivity(intent);
                     //add to logged in user their correct number of questions
