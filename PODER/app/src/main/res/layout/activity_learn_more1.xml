@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/onboarding_15" />
 
     <Button
-        android:id="@+id/next"
+        android:id="@+id/b1"
         android:layout_width="423dp"
         android:layout_height="59dp"
         app:layout_constraintBottom_toBottomOf="parent"
