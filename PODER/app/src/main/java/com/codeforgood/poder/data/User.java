@@ -5,10 +5,36 @@ public class User {
     private String name;
     private int phoneNumber;
     private int registrationTestScore;
+    private String address;
+
+    //Demographic information
+    private int howDidYouHearAboutUs;
+    private String referral;
+    private boolean[] workPreference;
+    private boolean[] locationPreference;
+    private boolean timePreference;
+    private boolean[] meansOfTransportation;
+
 
     public User(String email, String name) {
         this.email = email;
         this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getReferral() {
+        return referral;
+    }
+
+    public void setReferral(String referral) {
+        this.referral = referral;
     }
 
     public int getPhoneNumber() {
@@ -27,12 +53,51 @@ public class User {
         this.registrationTestScore = registrationTestScore;
     }
 
-    public String getEmail() {
-        return email;
+    public String getAddress() {
+        return address;
     }
 
-    public String getName() {
-        return name;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
+    public int getHowDidYouHearAboutUs() {
+        return howDidYouHearAboutUs;
+    }
+
+    public void setHowDidYouHearAboutUs(int howDidYouHearAboutUs) {
+        this.howDidYouHearAboutUs = howDidYouHearAboutUs;
+    }
+
+    public boolean[] getWorkPreference() {
+        return workPreference;
+    }
+
+    public void setWorkPreference(boolean[] workPreference) {
+        this.workPreference = workPreference;
+    }
+
+    public boolean[] getLocationPreference() {
+        return locationPreference;
+    }
+
+    public void setLocationPreference(boolean[] locationPreference) {
+        this.locationPreference = locationPreference;
+    }
+
+    public boolean isTimePreference() {
+        return timePreference;
+    }
+
+    public void setTimePreference(boolean timePreference) {
+        this.timePreference = timePreference;
+    }
+
+    public boolean[] getMeansOfTransportation() {
+        return meansOfTransportation;
+    }
+
+    public void setMeansOfTransportation(boolean[] meansOfTransportation) {
+        this.meansOfTransportation = meansOfTransportation;
+    }
 }
