@@ -1,22 +1,26 @@
 package com.codeforgood.poder.ui.login;
 
+import androidx.annotation.RequiresApi;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
 import com.codeforgood.poder.R;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 //i think this is like mainactivity.java
     private LoginViewModel loginViewModel;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,12 +32,23 @@ public class LoginActivity extends AppCompatActivity {
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
+        //loginButton.setOnClickListener({
+        //public void onClick(View view){
+        loginButton.setOnClickListener(this);
+
     }
 
-//right now we will validate all of them
-    private void validate(String userName, String password){
-    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+            public void onClick(View v) {
+                validate();
+            }
 
+        //validate();
+
+
+//right now we will validate all of them
+    private void validate(){
+    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+    startActivity(intent);
     }
 
       /*  loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
