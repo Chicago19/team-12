@@ -32,8 +32,8 @@ public class Question {
             {"on Sunday", "on Tuesday", "on Saturday", "on Monday"},
             {"three", "four" , "five", "six"},
             {"Dan", "Juan", "Megan" , "Sally"},
-            {},
-            {}
+            {"on", "across from", "on the corner of", "next to"},
+            { "talking", "are talking", "is talking", "talk"}
 
     };
 
