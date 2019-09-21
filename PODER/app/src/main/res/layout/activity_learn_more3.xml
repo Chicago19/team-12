@@ -4,28 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LearnMore1Activity">
+    tools:context=".LearnMore3Activity">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="431dp"
-        android:layout_height="782dp"
+        android:id="@+id/imageView4"
+        android:layout_width="444dp"
+        android:layout_height="826dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.509"
-        app:srcCompat="@drawable/onboarding_15" />
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@drawable/slidethree" />
 
     <Button
-        android:id="@+id/next"
-        android:layout_width="423dp"
-        android:layout_height="59dp"
+        android:id="@+id/next3"
+        android:layout_width="410dp"
+        android:layout_height="69dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0"
-    tools:layout_editor_absoluteY="667dp" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="1.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
