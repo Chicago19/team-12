@@ -82,8 +82,8 @@ public class ExtraElements extends AppCompatActivity {
         });
 
         Button twitter = (Button) findViewById(R.id.twitter);
-//        twitter.setVisibility(View.VISIBLE);
-//        twitter.setBackgroundColor(Color.TRANSPARENT);
+        twitter.setVisibility(View.VISIBLE);
+        twitter.setBackgroundColor(Color.TRANSPARENT);
 
         twitter.setOnClickListener(new View.OnClickListener() {
             @Override
