@@ -21,11 +21,11 @@ public class LearnMore3Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_learn_more3);
 
-        Button next = (Button) findViewById(R.id.next3);
-        next.setVisibility(View.VISIBLE);
-        next.setBackgroundColor(Color.TRANSPARENT);
+        Button b3 = (Button) findViewById(R.id.b3);
+        b3.setVisibility(View.VISIBLE);
+        b3.setBackgroundColor(Color.TRANSPARENT);
 
-        next.setOnClickListener(new View.OnClickListener() {
+        b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LearnMore3Activity.this, ExtraElements.class);

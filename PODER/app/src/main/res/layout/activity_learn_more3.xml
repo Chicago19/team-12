@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/slidethree" />
 
     <Button
-        android:id="@+id/next3"
+        android:id="@+id/b3"
         android:layout_width="410dp"
         android:layout_height="69dp"
         app:layout_constraintBottom_toBottomOf="parent"
