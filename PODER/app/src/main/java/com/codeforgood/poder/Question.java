@@ -3,12 +3,41 @@ package com.codeforgood.poder;
 public class Question {
     //Class that will update the view with the new question
 
+
     private String questionText;
     private String ChoiceA;
     private String ChoiceB;
     private String ChoiceC;
     private String ChoiceD;
     private int pictureId;
+
+    private static String[] Questions = {
+
+            "1. What’s the mother’s name?",
+            "2. There are three ___ on the table.",
+            "3. Is Ramona happy?",
+            "4. Carmina’s Restaurant is open ___.",
+            "5. How many people work at the day-care center?",
+            "6. Who works until 8:00 p.m. on Tuesday and Thursday?",
+            "7. The post office is ___ the parking lot.",
+            "8. A What are Katia and Sara doing?, They ___"
+
+    };
+
+    private static String[][] Answers = {
+            { " His name is Pilar.", "Her name is Pilar.", "Their name is Pilar.",
+                    "Your name is Pilar."},
+            {"cup", "cups", "cake", "plate"},
+            {"Yes, she is.", "Yes, we are.", "Yes, he is.", "Yes, they are."},
+            {"on Sunday", "on Tuesday", "on Saturday", "on Monday"},
+            {"three", "four" , "five", "six"},
+            {"Dan", "Juan", "Megan" , "Sally"},
+            {},
+            {}
+
+    };
+
+
 
     private String CorrectAnswer;
     int CurrentQuestion;

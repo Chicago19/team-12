@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 import android.view.View;
 
+import org.w3c.dom.Text;
+
 
 public class PlacementExam extends AppCompatActivity {
 
@@ -42,14 +44,14 @@ public class PlacementExam extends AppCompatActivity {
     private void initialize() {
         //include images
         next_question_button = (Button) findViewById(R.id.next_button);
-/*        next_question_button.setOnClickListener( new View.OnClickListener(){
+        next_question_button.setOnClickListener( new View.OnClickListener(){
             public void onClick (View v){
                 //changing page
                 Advance();
             }
         });
-
-*/
+        tv_questions = (TextView) findViewById(R.id.question_text);
+        rg_choices = (RadioGroup) findViewById(R.id.rg);
         iv_picture = (ImageView) findViewById(R.id.iv_picture);
         rb_choiceA = (RadioButton) findViewById(R.id.a_rb);
         rb_choiceB = (RadioButton) findViewById(R.id.b_rb);
@@ -74,6 +76,8 @@ public class PlacementExam extends AppCompatActivity {
         rb_choiceC.setText(questions.get(currentQuestionIndex).getChoiceC());
         rb_choiceD.setText(questions.get(currentQuestionIndex).getChoiceD());
         rg_choices.clearCheck();
+        rb_choiceD.setText(questions.get(currentQuestionIndex).getChoiceD());
+
     }
     private void Advance() {
         currentQuestionIndex++;
