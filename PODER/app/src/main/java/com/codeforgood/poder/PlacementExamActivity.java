@@ -2,6 +2,7 @@ package com.codeforgood.poder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.provider.MediaStore;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -9,8 +10,12 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.os.Bundle;
 import android.widget.ImageView;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import android.view.View;
+
+import com.codeforgood.poder.ui.login.LoginActivity;
 
 import org.w3c.dom.Text;
 
@@ -33,6 +38,7 @@ public class PlacementExamActivity extends AppCompatActivity {
     private int currentQuestionIndex;
     private Question questions;
 
+    private ArrayList<String> student_answers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +54,11 @@ public class PlacementExamActivity extends AppCompatActivity {
             public void onClick (View v){
                 //changing page
                 Advance();
+                addAnswer();
+
             }
         });
+        student_answers = new ArrayList<String>();
         tv_questions = (TextView) findViewById(R.id.question_text);
         rg_choices = (RadioGroup) findViewById(R.id.rg);
         iv_picture = (ImageView) findViewById(R.id.iv_picture);
@@ -66,8 +75,16 @@ public class PlacementExamActivity extends AppCompatActivity {
     }
 
     private void DisplayQuestion(int index) {
-        //eventually will display a picture for each question
 
+        if(questions.getImageId(currentQuestionIndex) != -1) {
+            iv_picture.setImageResource((questions.getImageId(currentQuestionIndex)));
+            iv_picture.setVisibility(View.VISIBLE);
+        }
+        else {
+            iv_picture.setVisibility(View.INVISIBLE);
+        }
+
+        iv_picture.setImageResource(questions.getImageId(currentQuestionIndex));
         tv_questions.setText(questions.getQuestionText(currentQuestionIndex));
         rb_choiceA.setText(questions.getChoiceA(currentQuestionIndex));
         rb_choiceB.setText(questions.getChoiceB(currentQuestionIndex));;
@@ -82,14 +99,39 @@ public class PlacementExamActivity extends AppCompatActivity {
         if(currentQuestionIndex >= questions.numQuestions) {
             //change to next page
             //grade
-            return;
+            next_question_button.setText("Finish");
+
+            next_question_button.setOnClickListener( new View.OnClickListener(){
+                public void onClick (View v){
+                    PlacementTest finished_test = new PlacementTest();
+                    int num_correct = finished_test.grade(student_answers);
+                    Intent intent = new Intent(PlacementExamActivity.this, ExamResults.class);
+                    intent.putExtra("questions", num_correct);
+                    startActivity(intent);
+                    //add to logged in user their correct number of questions
+                    //redirect to finished page.
+                }
+            });
+
+        } else {
+            DisplayQuestion(currentQuestionIndex);
+
         }
 
-        DisplayQuestion(currentQuestionIndex);
     }
 
+    private void addAnswer() {
+        int id = rg_choices.getCheckedRadioButtonId();
+        RadioButton rb_selected = (RadioButton) findViewById(id);
+        if(rb_selected == rb_choiceA) { student_answers.add("a");}
+        else if (rb_selected == rb_choiceB  ) {
+            student_answers.add("b");
+        } else if (rb_selected == rb_choiceC) {
+            student_answers.add("c");
+        } else {
+            student_answers.add("d");
+        }
 
-
-
+    }
 
 }

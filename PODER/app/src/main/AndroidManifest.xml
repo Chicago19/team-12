@@ -21,6 +21,7 @@
         <activity android:name=".LearnMore3Activity" />
         <activity android:name=".LearnMore2Activity" />
         <activity android:name=".LearnMore1Activity" />
+        <activity android:name=".ExamResults" />
         <activity android:name=".HomePageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

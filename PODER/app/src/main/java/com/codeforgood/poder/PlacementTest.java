@@ -7,6 +7,7 @@ public class PlacementTest {
     private  HashMap<Integer, String> answerKey;
 
     public PlacementTest() {
+        answerKey = new HashMap<Integer, String>();
         createAnswerKey();
     }
 
