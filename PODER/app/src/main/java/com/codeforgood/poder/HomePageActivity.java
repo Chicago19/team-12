@@ -12,7 +12,7 @@ import android.widget.Button;
 
 import com.codeforgood.poder.ui.login.LoginActivity;
 
-public class HomePage extends AppCompatActivity {
+public class HomePageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class HomePage extends AppCompatActivity {
         test.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                Intent intent = new Intent(HomePage.this, LoginActivity.class);
+                Intent intent = new Intent(HomePageActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
