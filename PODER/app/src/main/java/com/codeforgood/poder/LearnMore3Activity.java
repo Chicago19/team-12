@@ -14,7 +14,7 @@ public class LearnMore3Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learn_more3);
-        Button next = (Button) findViewById(R.id.next2);
+        Button next = (Button) findViewById(R.id.next3);
 
         next.setVisibility(View.VISIBLE);
         next.setBackgroundColor(Color.TRANSPARENT);
