@@ -11,8 +11,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import com.codeforgood.poder.ui.login.RegistrationActivity;
-
 public class ExtraElements extends AppCompatActivity {
 
     @Override
@@ -84,8 +82,8 @@ public class ExtraElements extends AppCompatActivity {
         });
 
         Button twitter = (Button) findViewById(R.id.twitter);
-        twitter.setVisibility(View.VISIBLE);
-        twitter.setBackgroundColor(Color.TRANSPARENT);
+//        twitter.setVisibility(View.VISIBLE);
+//        twitter.setBackgroundColor(Color.TRANSPARENT);
 
         twitter.setOnClickListener(new View.OnClickListener() {
             @Override

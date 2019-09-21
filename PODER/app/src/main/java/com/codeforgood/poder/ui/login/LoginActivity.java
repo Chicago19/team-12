@@ -1,7 +1,6 @@
 package com.codeforgood.poder.ui.login;
 
 import androidx.annotation.RequiresApi;
-import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -14,10 +13,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ProgressBar;
 
-import com.codeforgood.poder.HomePage;
+import com.codeforgood.poder.DboardActivity;
 import com.codeforgood.poder.LearnMore1Activity;
 import com.codeforgood.poder.R;
 

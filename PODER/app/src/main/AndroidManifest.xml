@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.login.RegistrationActivity"></activity>
+        <activity android:name=".RegistrationActivity"></activity>
         <activity android:name=".ContactUsActivity" />
         <activity android:name=".AppointmentActivity" />
         <activity android:name=".AccountActivity" />
@@ -26,7 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.login.DboardActivity" />
+        <activity android:name=".DboardActivity" />
         <activity android:name=".PlacementExam" />
         <activity android:name=".InterestedInWorkActivity" />
         <activity

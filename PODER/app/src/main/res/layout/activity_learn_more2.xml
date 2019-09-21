@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/slide_two" />
 
     <Button
-        android:id="@+id/next2"
+        android:id="@+id/nextlm3"
         android:layout_width="423dp"
         android:layout_height="59dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"

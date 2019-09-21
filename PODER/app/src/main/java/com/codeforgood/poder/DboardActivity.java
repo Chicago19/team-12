@@ -1,4 +1,4 @@
-package com.codeforgood.poder.ui.login;
+package com.codeforgood.poder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,11 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import com.codeforgood.poder.AccountActivity;
-import com.codeforgood.poder.AppointmentActivity;
-import com.codeforgood.poder.HomePage;
-import com.codeforgood.poder.PlacementExam;
-import com.codeforgood.poder.R;
+import com.codeforgood.poder.ui.login.LoginActivity;
 
 public class DboardActivity extends AppCompatActivity {
 

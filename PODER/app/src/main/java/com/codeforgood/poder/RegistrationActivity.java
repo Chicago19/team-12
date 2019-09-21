@@ -1,4 +1,4 @@
-package com.codeforgood.poder.ui.login;
+package com.codeforgood.poder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
