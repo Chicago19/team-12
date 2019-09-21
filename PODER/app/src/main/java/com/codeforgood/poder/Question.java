@@ -35,6 +35,7 @@ public class Question {
             {"on", "across from", "on the corner of", "next to"},
             { "talking", "are talking", "is talking", "talk"}
     };
+    private static int[] images = { R.mipmap.poderlogo};
 
 
 
@@ -45,7 +46,9 @@ public class Question {
     //Send question values in an array
 
     public Question(int id, String question_text) {
+
         this.questionText = question_text;
+
         this.pictureId = id;
     }
     public String getQuestionText(int questionNumber) {
@@ -55,6 +58,9 @@ public class Question {
     public void setQuestionText(String questionText) {
         //Get question text from the question database
         this.questionText = questionText;
+    }
+    public int getImageId(int questionNumber) {
+        return images[0];
     }
 
     public String getChoiceA(int questionNumber) {
