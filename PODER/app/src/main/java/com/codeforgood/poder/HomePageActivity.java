@@ -22,7 +22,7 @@ public class HomePageActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home_page);
 
-        Button login = (Button)findViewById(R.id.login);
+        Button login = (Button)findViewById(R.id.getstarted);
         login.setVisibility(View.VISIBLE);
         login.setBackgroundColor(Color.TRANSPARENT);
 
@@ -34,14 +34,14 @@ public class HomePageActivity extends AppCompatActivity {
             }
         });
 
-        Button signup = (Button)findViewById(R.id.signup);
+        Button signup = (Button)findViewById(R.id.getstarted);
         signup.setVisibility(View.VISIBLE);
         signup.setBackgroundColor(Color.TRANSPARENT);
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomePageActivity.this, LearnMore1Activity.class);
+                Intent intent = new Intent(HomePageActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

@@ -23,27 +23,10 @@ public class DboardActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_dboard);
         Button acc = (Button) findViewById(R.id.AccountButton);
-        Button app = (Button) findViewById(R.id.AppointmentButton);
-        Button demo = (Button) findViewById(R.id.DemographicsButton);
-        Button exam = (Button) findViewById(R.id.ExamButton);
-        Button logout = (Button) findViewById(R.id.logout);
-
         acc.setVisibility(View.VISIBLE);
         acc.setBackgroundColor(Color.TRANSPARENT);
 
-        app.setVisibility(View.VISIBLE);
-        app.setBackgroundColor(Color.TRANSPARENT);
-
-        demo.setVisibility(View.VISIBLE);
-        demo.setBackgroundColor(Color.TRANSPARENT);
-
-        exam.setVisibility(View.VISIBLE);
-        exam.setBackgroundColor(Color.TRANSPARENT);
-
-        logout.setVisibility(View.VISIBLE);
-        logout.setBackgroundColor(Color.TRANSPARENT);
-
-//        acc.setOnClickListener(new View.OnClickListener() {
+        //    acc.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                Intent intent = new Intent(DboardActivity.this, AccountActivity.class);
@@ -51,13 +34,9 @@ public class DboardActivity extends AppCompatActivity {
 //            }
 //        });
 
-        demo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DboardActivity.this, RegistrationActivity.class);
-                startActivity(intent);
-            }
-        });
+        Button app = (Button) findViewById(R.id.AppointmentButton);
+        app.setVisibility(View.VISIBLE);
+        app.setBackgroundColor(Color.TRANSPARENT);
 
         app.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +46,22 @@ public class DboardActivity extends AppCompatActivity {
             }
         });
 
+        Button demo = (Button) findViewById(R.id.DemographicsButton);
+        demo.setVisibility(View.VISIBLE);
+        demo.setBackgroundColor(Color.TRANSPARENT);
+
+        demo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DboardActivity.this, RegistrationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button exam = (Button) findViewById(R.id.ExamButton);
+        exam.setVisibility(View.VISIBLE);
+        exam.setBackgroundColor(Color.TRANSPARENT);
+
         exam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +69,11 @@ public class DboardActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        Button logout = (Button) findViewById(R.id.logout);
+        logout.setVisibility(View.VISIBLE);
+        logout.setBackgroundColor(Color.TRANSPARENT);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
