@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".AppointmentActivity">
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="428dp"
+        android:layout_height="751dp"
+        app:srcCompat="@drawable/results"
+        tools:layout_editor_absoluteX="-9dp"
+        tools:layout_editor_absoluteY="-10dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
