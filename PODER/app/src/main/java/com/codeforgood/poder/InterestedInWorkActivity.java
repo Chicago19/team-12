@@ -1,4 +1,4 @@
-package com.codeforgood.poder.ui.login;
+package com.codeforgood.poder;
 
 import android.os.Bundle;
 
@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.codeforgood.poder.R;
 
-class InterestedInWorkActivity extends AppCompatActivity {
+public class InterestedInWorkActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
