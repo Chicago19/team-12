@@ -9,8 +9,12 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.os.Bundle;
 import android.widget.ImageView;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import android.view.View;
+
+import com.codeforgood.poder.data.PlacementTestAnswers;
 
 import org.w3c.dom.Text;
 
@@ -33,6 +37,7 @@ public class PlacementExam extends AppCompatActivity {
     private int currentQuestionIndex;
     private Question questions;
 
+    private ArrayList<String> student_answers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +55,7 @@ public class PlacementExam extends AppCompatActivity {
                 Advance();
             }
         });
+        student_answers = new ArrayList<String>();
         tv_questions = (TextView) findViewById(R.id.question_text);
         rg_choices = (RadioGroup) findViewById(R.id.rg);
         iv_picture = (ImageView) findViewById(R.id.iv_picture);
@@ -82,10 +88,34 @@ public class PlacementExam extends AppCompatActivity {
         if(currentQuestionIndex >= questions.numQuestions) {
             //change to next page
             //grade
-            return;
+            next_question_button.setText("Finish");
+
+            next_question_button.setOnClickListener( new View.OnClickListener(){
+                public void onClick (View v){
+                    PlacementTestAnswers finished_test = new PlacementTestAnswers();
+                    int num_correct = finished_test.grade(student_answers);
+                    //add to logged in user their correct number of questions
+                    //redirect to finished page.
+                }
+            });
+
         }
 
         DisplayQuestion(currentQuestionIndex);
+    }
+
+    private void addAnswer() {
+        int id = rg_choices.getCheckedRadioButtonId();
+        RadioButton rb_selected = (RadioButton) findViewById(id);
+        if(rb_selected == rb_choiceA) { student_answers.add("a");}
+        else if (rb_selected == rb_choiceB  ) {
+            student_answers.add("b");
+        } else if (rb_selected == rb_choiceC) {
+            student_answers.add("c");
+        } else {
+            student_answers.add("d");
+        }
+
     }
 
 

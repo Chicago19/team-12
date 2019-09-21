@@ -6,6 +6,7 @@ public class User {
     private int phoneNumber;
     private int registrationTestScore;
     private String address;
+    private int questions_correct;
 
     //Demographic information
     private int howDidYouHearAboutUs;
@@ -117,5 +118,8 @@ public class User {
 
     public void setMeansOfTransportation(boolean[] meansOfTransportation) {
         this.meansOfTransportation = meansOfTransportation;
+    }
+    public void setQuestions_correct(int questions_correct) {
+        this.questions_correct = questions_correct;
     }
 }
