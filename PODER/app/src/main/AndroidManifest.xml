@@ -13,16 +13,14 @@
         <activity android:name=".ExamResults"></activity>
         <activity android:name=".LearnMore1Activity" />
         <activity android:name=".HomePage">
-
-        </activity>
-        <activity android:name=".ui.login.DboardActivity" />
-        <activity android:name=".PlacementExam">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            </activity>
+        </activity>
+        <activity android:name=".ui.login.DboardActivity" />
+        <activity android:name=".PlacementExam" />
         <activity android:name=".ui.login.InterestedInWorkActivity" />
         <activity
             android:name=".ui.login.LoginActivity"
