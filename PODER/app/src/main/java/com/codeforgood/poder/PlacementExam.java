@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 import android.view.View;
 
+import org.w3c.dom.Text;
+
 
 public class PlacementExam extends AppCompatActivity {
 
@@ -29,7 +31,7 @@ public class PlacementExam extends AppCompatActivity {
 
 
     private int currentQuestionIndex;
-    private ArrayList<Question> questions;
+    private Question questions;
 
 
     @Override
@@ -42,14 +44,14 @@ public class PlacementExam extends AppCompatActivity {
     private void initialize() {
         //include images
         next_question_button = (Button) findViewById(R.id.next_button);
-/*        next_question_button.setOnClickListener( new View.OnClickListener(){
+        next_question_button.setOnClickListener( new View.OnClickListener(){
             public void onClick (View v){
                 //changing page
                 Advance();
             }
         });
-
-*/
+        tv_questions = (TextView) findViewById(R.id.question_text);
+        rg_choices = (RadioGroup) findViewById(R.id.rg);
         iv_picture = (ImageView) findViewById(R.id.iv_picture);
         rb_choiceA = (RadioButton) findViewById(R.id.a_rb);
         rb_choiceB = (RadioButton) findViewById(R.id.b_rb);
@@ -57,30 +59,32 @@ public class PlacementExam extends AppCompatActivity {
         rb_choiceD = (RadioButton) findViewById(R.id.d_rb);
         next_question_button = (Button) findViewById(R.id.next_button);
         currentQuestionIndex = 0;
-        questions=new ArrayList<Question>();
+        questions=new Question(0, "");
 
-        questions.add(new Question(0, "Here is question 1!"));
-        questions.add(new Question(0, "Here is question 2!"));
-        questions.add(new Question(0, "Here is quesiton 3!"));
+
         this.DisplayQuestion(currentQuestionIndex);
     }
 
     private void DisplayQuestion(int index) {
         //eventually will display a picture for each question
 
-        tv_questions.setText(questions.get(currentQuestionIndex).getQuestionText());
-        rb_choiceA.setText(questions.get(currentQuestionIndex).getChoiceA());
-        rb_choiceB.setText(questions.get(currentQuestionIndex).getChoiceB());
-        rb_choiceC.setText(questions.get(currentQuestionIndex).getChoiceC());
-        rb_choiceD.setText(questions.get(currentQuestionIndex).getChoiceD());
+        tv_questions.setText(questions.getQuestionText(currentQuestionIndex));
+        rb_choiceA.setText(questions.getChoiceA(currentQuestionIndex));
+        rb_choiceB.setText(questions.getChoiceB(currentQuestionIndex));;
+        rb_choiceC.setText(questions.getChoiceC(currentQuestionIndex));
+        rb_choiceD.setText(questions.getChoiceD(currentQuestionIndex));
         rg_choices.clearCheck();
+
     }
     private void Advance() {
         currentQuestionIndex++;
 
-        if(currentQuestionIndex % questions.size() == 0) {
-            //end
+        if(currentQuestionIndex >= questions.numQuestions) {
+            //change to next page
+            //grade
+            return;
         }
+
         DisplayQuestion(currentQuestionIndex);
     }
 
