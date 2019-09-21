@@ -59,13 +59,13 @@ public class DboardActivity extends AppCompatActivity {
             }
         });
 
-//        app.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(DboardActivity.this, AppointmentActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        app.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DboardActivity.this, AppointmentActivity.class);
+                startActivity(intent);
+            }
+        });
 
         exam.setOnClickListener(new View.OnClickListener() {
             @Override
