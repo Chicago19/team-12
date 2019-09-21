@@ -35,6 +35,8 @@ public class Question {
             {"on", "across from", "on the corner of", "next to"},
             { "talking", "are talking", "is talking", "talk"}
     };
+    private static int[] images = {R.drawable.testquestion_1_pic, R.drawable.testquestion_1_pic, R.drawable.testquestion_4_pic, R.drawable.testquestion_4_pic, R.drawable.testquestion_5_pic,
+    R.drawable.testquestion_7_pic, R.drawable.testquestion_8_pic, R.drawable.testquestion_7_pic, R.drawable.testquestion_7_pic, R.drawable.testquestion_7_pic};
 
 
 
@@ -55,6 +57,9 @@ public class Question {
     public void setQuestionText(String questionText) {
         //Get question text from the question database
         this.questionText = questionText;
+    }
+    public int getImageId(int questionNumber) {
+        return images[questionNumber];
     }
 
     public String getChoiceA(int questionNumber) {

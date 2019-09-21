@@ -2,6 +2,7 @@ package com.codeforgood.poder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.provider.MediaStore;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -14,7 +15,9 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import android.view.View;
 
+import com.codeforgood.poder.data.PlacementTest;
 import com.codeforgood.poder.data.PlacementTestAnswers;
+import com.codeforgood.poder.ui.login.LoginActivity;
 
 import org.w3c.dom.Text;
 
@@ -53,6 +56,8 @@ public class PlacementExam extends AppCompatActivity {
             public void onClick (View v){
                 //changing page
                 Advance();
+                addAnswer();
+
             }
         });
         student_answers = new ArrayList<String>();
@@ -72,8 +77,16 @@ public class PlacementExam extends AppCompatActivity {
     }
 
     private void DisplayQuestion(int index) {
-        //eventually will display a picture for each question
 
+        if(questions.getImageId(currentQuestionIndex) != -1) {
+            iv_picture.setImageResource((questions.getImageId(currentQuestionIndex)));
+            iv_picture.setVisibility(View.VISIBLE);
+        }
+        else {
+                iv_picture.setVisibility(View.INVISIBLE);
+            }
+
+        iv_picture.setImageResource(questions.getImageId(currentQuestionIndex));
         tv_questions.setText(questions.getQuestionText(currentQuestionIndex));
         rb_choiceA.setText(questions.getChoiceA(currentQuestionIndex));
         rb_choiceB.setText(questions.getChoiceB(currentQuestionIndex));;
@@ -94,15 +107,20 @@ public class PlacementExam extends AppCompatActivity {
                 public void onClick (View v){
                     PlacementTestAnswers finished_test = new PlacementTestAnswers();
                     int num_correct = finished_test.grade(student_answers);
+                    Intent intent = new Intent(PlacementExam.this, ExamResults.class);
+                    intent.putExtra("questions", num_correct);
+                    startActivity(intent);
                     //add to logged in user their correct number of questions
                     //redirect to finished page.
                 }
             });
 
+        } else {
+            DisplayQuestion(currentQuestionIndex);
+
         }
 
-        DisplayQuestion(currentQuestionIndex);
-    }
+            }
 
     private void addAnswer() {
         int id = rg_choices.getCheckedRadioButtonId();
@@ -117,9 +135,5 @@ public class PlacementExam extends AppCompatActivity {
         }
 
     }
-
-
-
-
 
 }

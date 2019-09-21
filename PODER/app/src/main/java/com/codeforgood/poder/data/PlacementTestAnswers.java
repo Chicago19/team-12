@@ -7,6 +7,8 @@ public class PlacementTestAnswers {
     private  HashMap<Integer, String> answerKey;
 
     public PlacementTestAnswers() {
+
+        answerKey = new HashMap<Integer, String>();
         createAnswerKey();
     }
 
@@ -63,7 +65,7 @@ public class PlacementTestAnswers {
      * */
     public int grade(ArrayList<String> studentAnswers) {
         int correct = 0;
-        for (int i = 1; i < studentAnswers.size(); i++) {
+        for (int i = 0; i < studentAnswers.size(); i++) {
             if (studentAnswers.get(i).equals(answerKey.get(i))) {
                 correct++;
             }
