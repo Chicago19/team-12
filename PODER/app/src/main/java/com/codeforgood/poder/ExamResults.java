@@ -24,7 +24,7 @@ public class ExamResults extends AppCompatActivity {
         questions_correct = intent.getIntExtra("questions", -1);
         score = (double) questions_correct / 8.0; // this depends on the number being 8 questions
         score_text = (TextView) findViewById(R.id.score_percent);
-        score_text.setText("" + score);
+        score_text.setText("" + score * 100 + "%");
 
 
 
