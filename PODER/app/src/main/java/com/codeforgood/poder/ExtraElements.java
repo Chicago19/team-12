@@ -64,7 +64,7 @@ public class ExtraElements extends AppCompatActivity {
         contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExtraElements.this, ExtraElements.class);
+                Intent intent = new Intent(ExtraElements.this, ContactUsActivity.class);
                 startActivity(intent);
             }
         });
@@ -83,7 +83,7 @@ public class ExtraElements extends AppCompatActivity {
 
         Button twitter = (Button) findViewById(R.id.twitter);
         twitter.setVisibility(View.VISIBLE);
-        twitter.setBackgroundColor(Color.TRANSPARENT);
+//        twitter.setBackgroundColor(Color.TRANSPARENT);
 
         twitter.setOnClickListener(new View.OnClickListener() {
             @Override
