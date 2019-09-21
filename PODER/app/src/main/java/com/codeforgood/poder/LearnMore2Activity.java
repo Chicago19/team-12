@@ -21,7 +21,7 @@ public class LearnMore2Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_learn_more1);
 
-        Button next = (Button) findViewById(R.id.next);
+        Button next = (Button) findViewById(R.id.next2);
         next.setVisibility(View.VISIBLE);
         next.setBackgroundColor(Color.TRANSPARENT);
 
