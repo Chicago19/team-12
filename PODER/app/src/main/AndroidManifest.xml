@@ -11,13 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ExtraElements"></activity>
+        <activity android:name=".ComtactUsActivity"></activity>
+        <activity android:name=".AppointmentActivity" />
+        <activity android:name=".AccountActivity" />
+        <activity android:name=".ExtraElements" />
         <activity android:name=".LearnMore3Activity" />
         <activity android:name=".LearnMore2Activity" />
         <activity android:name=".LearnMore1Activity" />
         <activity android:name=".HomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

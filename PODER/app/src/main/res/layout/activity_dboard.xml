@@ -80,5 +80,5 @@
         android:layout_alignRight="@+id/imageView"
         android:layout_marginTop="248dp"
         android:layout_marginEnd="215dp"
-        android:layout_marginRight="215dp"
+        android:layout_marginRight="215dp" />
 </RelativeLayout>
