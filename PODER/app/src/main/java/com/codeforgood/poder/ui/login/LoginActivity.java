@@ -17,39 +17,41 @@ import android.widget.ProgressBar;
 import com.codeforgood.poder.R;
 
 public class LoginActivity extends AppCompatActivity {
-//i think this is like mainactivity.java
+    //i think this is like mainactivity.java
     private LoginViewModel loginViewModel;
+    private Button loginButton;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
-                .get(LoginViewModel.class);
+        //loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
+        //.get(LoginViewModel.class);
 
         final EditText usernameEditText = findViewById(R.id.username);
         final EditText passwordEditText = findViewById(R.id.password);
-        final Button loginButton = findViewById(R.id.login);
+         loginButton =findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
-
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        final Button test = (Button)findViewById(R.id.testbutton);
+        test.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                validate();
+                Intent intent = new Intent(LoginActivity.this, DboardActivity.class);
+                startActivity(intent);
+                //validate();
             }
         });
     }
 
 
+    //validate();
 
-        //validate();
 
-
-//right now we will validate all of them
-    public void validate(){
-    Intent intent = new Intent(LoginActivity.this, DboardActivity.class);
-    startActivity(intent);
-    }
+    //right now we will validate all of them
+    /*public void validate() {
+        Intent intent = new Intent(LoginActivity.this, DboardActivity.class);
+        startActivity(intent);
+    }*/
 
       /*  loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override
@@ -67,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
+       /* loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
             @Override
             public void onChanged(@Nullable LoginResult loginResult) {
                 if (loginResult == null) {
@@ -137,4 +139,5 @@ public class LoginActivity extends AppCompatActivity {
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
     }*/
+
 }
