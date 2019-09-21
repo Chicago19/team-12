@@ -100,4 +100,50 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="register_text">Registration Form</string>
+    <string name="f_name">First Name</string>
+    <string name="l_name">Last Name</string>
+    <string name="zip">Zip Code</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="password_again">Re-enter Password</string>
+    <string name="birthday">Birthday</string>
+
+
+
+
+    <string name="referral">How did you hear about PODER?</string>
+    <string name="friend_family">Friend/Family</string>
+    <string name="community">Community Organization</string>
+    <string name="church">Church</string>
+    <string name="voluntary">Voluntary</string>
+    <string name="internet">Internet</string>
+    <string name="brochure">Brochure</string>
+    <string name="other_ref">Other</string>
+
+    <string name="services">What Services would you like to apply for?</string>
+    <string name="chk_english">Learn English</string>
+    <string name="chk_job">Get a Job</string>
+    <string name="chk_training">Job Training / Assistance</string>
+    <string name="chk_tech">Computers/Technology</string>
+    <string name="chk_other">Other</string>
+
+    <string name="sites">Please select the site where you would like to receive services</string>
+    <string name="site0">Site 0</string>
+    <string name="site1">Site 1</string>
+    <string name="site2">Site 2</string>
+    <string name="site3">Site 3</string>
+
+    <string name="time">Please select your preferred class time</string>
+    <string name="morning">Morning</string>
+    <string name="night">Night</string>
+
+    <string name="transportation">What is your main means of transportation?</string>
+    <string name="walk">Walk</string>
+    <string name="car">Car</string>
+    <string name="pub">Public Transportation</string>
+    <string name="ff">Driven by Friend/Family Member</string>
+
+
+    <string name="submit"> Register! </string>
 </resources>
