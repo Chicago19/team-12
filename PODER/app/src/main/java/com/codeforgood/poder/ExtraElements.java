@@ -11,6 +11,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.codeforgood.poder.ui.login.RegistrationActivity;
+
 public class ExtraElements extends AppCompatActivity {
 
     @Override
@@ -28,7 +30,7 @@ public class ExtraElements extends AppCompatActivity {
         su.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExtraElements.this, ExtraElements.class);
+                Intent intent = new Intent(ExtraElements.this, RegistrationActivity.class);
                 startActivity(intent);
             }
         });
@@ -64,7 +66,7 @@ public class ExtraElements extends AppCompatActivity {
         contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExtraElements.this, ExtraElements.class);
+                Intent intent = new Intent(ExtraElements.this, ContactUsActivity.class);
                 startActivity(intent);
             }
         });
