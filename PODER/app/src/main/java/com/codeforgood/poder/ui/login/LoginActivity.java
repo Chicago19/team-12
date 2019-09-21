@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 
 import com.codeforgood.poder.HomePage;
+import com.codeforgood.poder.LearnMore1Activity;
 import com.codeforgood.poder.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -47,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         test2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                Intent intent = new Intent(LoginActivity.this, DboardActivity.class);
+                Intent intent = new Intent(LoginActivity.this, LearnMore1Activity.class);
                 startActivity(intent);
             }
         });
