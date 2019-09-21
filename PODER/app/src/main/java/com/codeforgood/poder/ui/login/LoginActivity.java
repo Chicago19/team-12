@@ -1,35 +1,26 @@
 package com.codeforgood.poder.ui.login;
 
-import android.app.Activity;
-
-import androidx.lifecycle.Observer;
+import androidx.annotation.RequiresApi;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.codeforgood.poder.R;
-import com.codeforgood.poder.ui.login.LoginViewModel;
-import com.codeforgood.poder.ui.login.LoginViewModelFactory;
 
 public class LoginActivity extends AppCompatActivity {
-
+//i think this is like mainactivity.java
     private LoginViewModel loginViewModel;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +33,25 @@ public class LoginActivity extends AppCompatActivity {
         final Button loginButton = findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
 
-        loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                validate();
+            }
+        });
+    }
+
+
+
+        //validate();
+
+
+//right now we will validate all of them
+    public void validate(){
+    Intent intent = new Intent(LoginActivity.this, DboardActivity.class);
+    startActivity(intent);
+    }
+
+      /*  loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override
             public void onChanged(@Nullable LoginFormState loginFormState) {
                 if (loginFormState == null) {
@@ -127,5 +136,5 @@ public class LoginActivity extends AppCompatActivity {
 
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
-    }
+    }*/
 }
