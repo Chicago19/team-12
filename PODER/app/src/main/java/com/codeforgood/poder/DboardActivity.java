@@ -70,7 +70,7 @@ public class DboardActivity extends AppCompatActivity {
         exam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DboardActivity.this, PlacementExam.class);
+                Intent intent = new Intent(DboardActivity.this, PlacementExamActivity.class);
                 startActivity(intent);
             }
         });

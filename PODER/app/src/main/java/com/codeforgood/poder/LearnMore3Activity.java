@@ -28,7 +28,7 @@ public class LearnMore3Activity extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LearnMore3Activity.this, ExtraElements.class);
+                Intent intent = new Intent(LearnMore3Activity.this, ExtraElementsActivity.class);
                 startActivity(intent);
             }
         });

@@ -15,7 +15,7 @@ import android.view.View;
 import org.w3c.dom.Text;
 
 
-public class PlacementExam extends AppCompatActivity {
+public class PlacementExamActivity extends AppCompatActivity {
 
     private static RadioGroup rg_choices;
     private static RadioButton rb_selected;
