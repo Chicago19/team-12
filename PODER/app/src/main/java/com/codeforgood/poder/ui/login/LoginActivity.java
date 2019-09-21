@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -14,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
+import com.codeforgood.poder.HomePage;
 import com.codeforgood.poder.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -25,17 +27,28 @@ public class LoginActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
-                .get(LoginViewModel.class);
 
-        final EditText usernameEditText = findViewById(R.id.username);
-        final EditText passwordEditText = findViewById(R.id.password);
-        final Button loginButton = findViewById(R.id.login);
-        final ProgressBar loadingProgressBar = findViewById(R.id.loading);
+        final Button test = (Button)findViewById(R.id.login);
+        test.setVisibility(View.VISIBLE);
+        test.setBackgroundColor(Color.TRANSPARENT);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        test.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                validate();
+
+                Intent intent = new Intent(LoginActivity.this, DboardActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        final Button test2 = (Button)findViewById(R.id.signup);
+        test2.setVisibility(View.VISIBLE);
+        test2.setBackgroundColor(Color.TRANSPARENT);
+
+        test2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent intent = new Intent(LoginActivity.this, DboardActivity.class);
+                startActivity(intent);
             }
         });
     }
