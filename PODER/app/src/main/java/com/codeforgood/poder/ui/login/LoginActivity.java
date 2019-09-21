@@ -16,7 +16,7 @@ import android.widget.ProgressBar;
 
 import com.codeforgood.poder.R;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
+public class LoginActivity extends AppCompatActivity {
 //i think this is like mainactivity.java
     private LoginViewModel loginViewModel;
 
@@ -32,22 +32,22 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
-        //loginButton.setOnClickListener({
-        //public void onClick(View view){
-        loginButton.setOnClickListener(this);
 
-    }
-
+        loginButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 validate();
             }
+        });
+    }
+
+
 
         //validate();
 
 
 //right now we will validate all of them
-    private void validate(){
-    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+    public void validate(){
+    Intent intent = new Intent(LoginActivity.this, DboardActivity.class);
     startActivity(intent);
     }
 
