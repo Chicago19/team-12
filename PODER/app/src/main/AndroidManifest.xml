@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LearnMore2Activity"></activity>
+        <activity android:name=".ExtraElements"></activity>
+        <activity android:name=".LearnMore3Activity" />
+        <activity android:name=".LearnMore2Activity" />
         <activity android:name=".LearnMore1Activity" />
         <activity android:name=".HomePage">
             <intent-filter>
