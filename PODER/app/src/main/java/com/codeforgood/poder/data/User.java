@@ -15,10 +15,28 @@ public class User {
     private boolean timePreference;
     private boolean[] meansOfTransportation;
 
+    private Status userStatus;
+
+    public enum Status {
+        NEW,
+        REGISTERED,
+        ENROLLED,
+        DROPPEED;
+    }
 
     public User(String email, String name) {
         this.email = email;
         this.name = name;
+        this.userStatus = Status.NEW;
+
+    }
+
+    public Status getUserStatus() {
+        return userStatus;
+    }
+
+    public void setUserStatus(Status userStatus) {
+        this.userStatus = userStatus;
     }
 
     public String getEmail() {
