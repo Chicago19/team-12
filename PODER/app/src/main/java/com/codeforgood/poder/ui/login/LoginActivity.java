@@ -31,9 +31,15 @@ public class LoginActivity extends AppCompatActivity {
 
         final EditText usernameEditText = findViewById(R.id.username);
         final EditText passwordEditText = findViewById(R.id.password);
-         loginButton =findViewById(R.id.login);
+        // loginButton =findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
+
+
+
         final Button test = (Button)findViewById(R.id.testbutton);
+
+
+
         test.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, DboardActivity.class);
