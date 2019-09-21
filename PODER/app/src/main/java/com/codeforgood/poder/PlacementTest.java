@@ -1,4 +1,4 @@
-package com.codeforgood.poder.data;
+package com.codeforgood.poder;
 import java.util.HashMap;
 import java.util.ArrayList;
 
