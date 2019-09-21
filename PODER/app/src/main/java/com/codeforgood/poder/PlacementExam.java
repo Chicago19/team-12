@@ -31,7 +31,7 @@ public class PlacementExam extends AppCompatActivity {
 
 
     private int currentQuestionIndex;
-    private ArrayList<Question> questions;
+    private Question questions;
 
 
     @Override
@@ -59,32 +59,32 @@ public class PlacementExam extends AppCompatActivity {
         rb_choiceD = (RadioButton) findViewById(R.id.d_rb);
         next_question_button = (Button) findViewById(R.id.next_button);
         currentQuestionIndex = 0;
-        questions=new ArrayList<Question>();
+        questions=new Question(0, "");
 
-        questions.add(new Question(0, "Here is question 1!"));
-        questions.add(new Question(0, "Here is question 2!"));
-        questions.add(new Question(0, "Here is quesiton 3!"));
+
         this.DisplayQuestion(currentQuestionIndex);
     }
 
     private void DisplayQuestion(int index) {
         //eventually will display a picture for each question
 
-        tv_questions.setText(questions.get(currentQuestionIndex).getQuestionText());
-        rb_choiceA.setText(questions.get(currentQuestionIndex).getChoiceA());
-        rb_choiceB.setText(questions.get(currentQuestionIndex).getChoiceB());
-        rb_choiceC.setText(questions.get(currentQuestionIndex).getChoiceC());
-        rb_choiceD.setText(questions.get(currentQuestionIndex).getChoiceD());
+        tv_questions.setText(questions.getQuestionText(currentQuestionIndex));
+        rb_choiceA.setText(questions.getChoiceA(currentQuestionIndex));
+        rb_choiceB.setText(questions.getChoiceB(currentQuestionIndex));;
+        rb_choiceC.setText(questions.getChoiceC(currentQuestionIndex));
+        rb_choiceD.setText(questions.getChoiceD(currentQuestionIndex));
         rg_choices.clearCheck();
-        rb_choiceD.setText(questions.get(currentQuestionIndex).getChoiceD());
 
     }
     private void Advance() {
         currentQuestionIndex++;
 
-        if(currentQuestionIndex % questions.size() == 0) {
-            //end
+        if(currentQuestionIndex >= questions.numQuestions) {
+            //change to next page
+            //grade
+            return;
         }
+
         DisplayQuestion(currentQuestionIndex);
     }
 

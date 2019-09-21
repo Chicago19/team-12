@@ -34,7 +34,6 @@ public class Question {
             {"Dan", "Juan", "Megan" , "Sally"},
             {"on", "across from", "on the corner of", "next to"},
             { "talking", "are talking", "is talking", "talk"}
-
     };
 
 
@@ -42,14 +41,15 @@ public class Question {
     private String CorrectAnswer;
     int CurrentQuestion;
     int[] answers = new int[41];
+    public int numQuestions = 8;
     //Send question values in an array
 
     public Question(int id, String question_text) {
         this.questionText = question_text;
         this.pictureId = id;
     }
-    public String getQuestionText() {
-        return questionText;
+    public String getQuestionText(int questionNumber) {
+        return Questions[questionNumber];
     }
 
     public void setQuestionText(String questionText) {
@@ -57,32 +57,32 @@ public class Question {
         this.questionText = questionText;
     }
 
-    public String getChoiceA() {
-        return ChoiceA;
+    public String getChoiceA(int questionNumber) {
+        return Answers[questionNumber][0];
     }
 
     public void setChoiceA(String choiceA) {
         ChoiceA = choiceA;
     }
 
-    public String getChoiceB() {
-        return ChoiceB;
+    public String getChoiceB(int questionNumber) {
+        return Answers[questionNumber][1];
     }
 
     public void setChoiceB(String choiceB) {
         ChoiceB = choiceB;
     }
 
-    public String getChoiceC() {
-        return ChoiceC;
+    public String getChoiceC(int questionNumber) {
+        return Answers[questionNumber][2];
     }
 
     public void setChoiceC(String choiceC) {
         ChoiceC = choiceC;
     }
 
-    public String getChoiceD() {
-        return ChoiceD;
+    public String getChoiceD(int questionNumber) {
+        return Answers[questionNumber][3];
     }
 
     public void setChoiceD(String choiceD) {
