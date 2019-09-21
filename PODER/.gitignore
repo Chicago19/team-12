@@ -4,8 +4,6 @@
 /.idea/
 .DS_Store
 /build
-/app/build
 /captures
 .externalNativeBuild
 .cxx
-/app/src/main/AndroidManifest.xml
